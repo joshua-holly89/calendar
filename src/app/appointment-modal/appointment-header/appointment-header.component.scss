@@ -1,0 +1,30 @@
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+  padding: 8px;
+}
+
+.flex-center-container {
+  display: flex;
+  align-items: center;
+}
+
+.time-container {
+  margin-left: 32px;
+}
+
+.date-time-icon {
+  margin-right: 8px;
+}
+
+.arrow-icon {
+  cursor: pointer;
+}
+
+.placeholder-margin {
+  margin-right: 24px;
+}

@@ -1,0 +1,27 @@
+.calendar-container {
+  background-color: white;
+  border: 2px solid #e7e7e7;
+  padding: 16px;
+}
+
+.week-view-container {
+  margin-left: 16px;
+}
+
+.calendar-view-header {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timespan-headline {
+  font-size: 20px;
+}
+
+.main-wrapper {
+  display: flex;
+  padding: 32px;
+  height: 100vh;
+  background-color: #f7f7f7;
+}

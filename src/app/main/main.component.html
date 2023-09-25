@@ -1,0 +1,41 @@
+<router-outlet></router-outlet>
+<div class="main-wrapper">
+  <div class="month-view-container calendar-container">
+    <div class="calendar-view-header">
+      <div class="timespan-headline e2e-month-headline">
+        {{ monthViewDate | calendarDate: monthView + "ViewTitle":"en" }}
+      </div>
+      <app-timespan-changer
+        [view]="monthView"
+        [viewDate]="monthViewDate"
+        (changeViewDate)="changeViewDate($event)"
+      ></app-timespan-changer>
+    </div>
+    <mwl-calendar-month-view
+      [viewDate]="monthViewDate"
+      [events]="events"
+      (dayClicked)="dayInMonthViewClicked($event.day)"
+    ></mwl-calendar-month-view>
+  </div>
+  <div class="week-view-container calendar-container">
+    <div class="calendar-view-header">
+      <div class="timespan-headline e2e-week-headline">
+        {{ weekViewDate | calendarDate: weekView + "ViewTitle":"en" }}
+      </div>
+      <app-timespan-changer
+        [view]="weekView"
+        [viewDate]="weekViewDate"
+        (changeViewDate)="changeViewDate($event)"
+      ></app-timespan-changer>
+    </div>
+    <mwl-calendar-week-view
+      [viewDate]="weekViewDate"
+      [events]="events"
+      (eventClicked)="openAppointment($event)"
+      [dayStartHour]="8"
+      [dayEndHour]="20"
+      (beforeViewRender)="markWeekDaySelectedInMonthView($event)"
+    >
+    </mwl-calendar-week-view>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.close-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#close-button {
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.attendees {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: -4px;
+}
+
+.person-icon {
+  margin-right: 8px;
+}

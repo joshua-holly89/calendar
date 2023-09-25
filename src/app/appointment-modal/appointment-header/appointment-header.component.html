@@ -1,0 +1,32 @@
+<div class="content-header">
+  <div class="date-time-container flex-center-container">
+    <span class="date-container flex-center-container">
+      <span class="material-icons date-time-icon">calendar_month</span>
+      <span class="e2e-appointment-date">{{ getDate() }}</span>
+    </span>
+    <span class="time-container flex-center-container">
+      <span class="material-icons date-time-icon">schedule</span>
+      <span class="e2e-appointment-time">
+        {{ getTime() }}
+      </span>
+    </span>
+  </div>
+
+  <div class="appointment-change-container">
+    <div
+      *ngIf="hasPreviousAppointment"
+      [class.placeholder-margin] = "!hasNextAppointment"
+      class="material-icons arrow-icon time-change-icons e2e-previous-appointment"
+      (click)="goToPreviousAppointment.next()"
+    >
+      arrow_back
+    </div>
+    <div
+      *ngIf="hasNextAppointment"
+      class="material-icons arrow-icon time-change-icons e2e-next-appointment"
+      (click)="goToNextAppointment.next()"
+    >
+      arrow_forward
+    </div>
+  </div>
+</div>

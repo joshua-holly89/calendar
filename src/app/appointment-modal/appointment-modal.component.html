@@ -1,0 +1,19 @@
+<div class="close-header">
+  <div id="close-button" class="material-icons" (click)="close()">close</div>
+</div>
+
+<app-appointment-header
+  [dateTime]="dateTime"
+  [hasNextAppointment]="hasNextAppointment()"
+  [hasPreviousAppointment]="hasPreviousAppointment()"
+  (goToNextAppointment)="goToNextAppointment()"
+  (goToPreviousAppointment)="goToPreviousAppointment()"
+></app-appointment-header>
+
+<div class="card">
+  <app-property-details [property]="property"></app-property-details>
+  <div class="attendees">
+    <span class="material-icons person-icon">person</span>
+    <span class="e2e-attendees" *ngIf="attendees"> {{ attendees.count }}&nbsp;of&nbsp;{{ attendees.max }} </span>
+  </div>
+</div>
